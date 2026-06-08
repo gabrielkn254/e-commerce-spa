@@ -1,16 +1,74 @@
-# React + Vite
+# E-commerce - React SPA
+## Description
+E-commerce-spa is a smart watch store multipage app that allows users to browse, view & admin to add new products.
+It is built with react, react-router with vite.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Pages
+- A home page: displays a welcome content and links with other pages.
+- A shop page: displays all products.
+- An admin page: allows admins to manage products.
+- A single product page: displays a specific product details.
 
-Currently, two official plugins are available:
+## Features
+### Shop page
+- Dynamically search products to filter
+- Click a product card view a product in detail
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Admin Portal
+- A form: allows admin to add  new products.
+- A product archive list: Admin can remove a product & preview it.
 
-## React Compiler
+### Data storage
+- Since this app has no database, the projects data is stored in your browser's `localStorage`.
+- It works by using your `localStorage` to store data and react states to render projects' cards.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Component Tree
+App
+  ↳ HomePage
+      ↳ Navbar
+      ↳ HeroSection
+      ↳ ProductsList
+      ↳ Footer
 
-## Expanding the ESLint configuration
+  ↳ ShopPage
+      ↳ Navbar
+      ↳ SearchBar
+      ↳ ProductsList
+          ↳ ProductCard
+          ↳ ProductDetails
+      ↳ Footer
+  
+  ↳ AdminPortal
+      ↳ Navbar
+      ↳ AddProductForm
+      ↳ ArchivesList
+          ↳ ArchiveCard
+      ↳ Footer
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+- React: Creating UI components and handling states & events.
+- React Router: handling navigation.
+- Vite: Build tool to enable seamless react development.
+- npm: Handle all our project dependecies & modules.
+- HTML5 & CSS: Semantic markup and Styling.
+- Javascript: add functionality
+
+## Getting Started
+You only a web browser to run this application.
+
+### installation
+1. Clone the repository:
+`git clone https://github.com/gabrielkn254/e-commerce-spa`
+
+2. Navigate to the project directory:
+`cd e-commerce-spa`
+
+3. To run raw code
+`npm run dev`
+
+### execution
+Click this link to open the deployed app
+Link -> `https://gabrielkn254.github.io/e-commerce-spa/`
+
+## License
+This project is licensed under the MIT License.
