@@ -1,0 +1,10 @@
+.product-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.product-list a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -5,7 +5,7 @@ import Footer from '../footer/Footer'
 const HomePage = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar  buttonText="Login to Admin Portal" btnClass="primary-btn" link={'/admin-portal'} />
       this is a homepage.
       <Footer />
     </div>

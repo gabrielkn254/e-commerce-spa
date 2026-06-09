@@ -1,16 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router'
+import './navbar.css'
 
-const Navbar = () => {
+const Navbar = ({buttonText, btnClass, link}) => {
+  const buttonClasses = `login-btn ${btnClass}`
   return (
-    <div>
-      <nav>
-        <Link to='/'>HOME</Link>
-        <Link to='/shop'>SHOP</Link>
-      </nav>
-      <Link to='/admin-portal'>
-        <button>Login to Admin Portal</button>
-      </Link>
+    <div className="navbar">
+      <div className='navbar-content'>
+        <nav>
+          <Link to='/'>HOME</Link>
+          <Link to='/shop'>SHOP</Link>
+        </nav>
+        <Link to={link}>
+          <button className={buttonClasses} >{buttonText}</button>
+        </Link>
+      </div>
       <hr />
     </div>
   )

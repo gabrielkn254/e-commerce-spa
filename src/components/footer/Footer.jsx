@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import './footer.css'
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
         <Link to='/shop'>SHOP</Link>
         <Link to='/admin-portal'>ADMIN PORTAL</Link>
       </nav>
-      <p>E-commerce App. Reference: <Link to='ke.oraimo.com'>Oraimo Ke</Link></p>
+      <p>E-commerce App. Reference: <Link to='https://ke.oraimo.com'>Oraimo Ke</Link></p>
     </div>
   )
 }

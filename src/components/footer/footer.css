@@ -1,0 +1,29 @@
+.footer {
+ padding: 16px;
+}
+
+.footer-nav-links{
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 24px 0 0 0;
+}
+
+.footer-nav-links > *{
+  font-size: 16px;
+  font-weight: 400;
+  color: #191919;
+  text-decoration: none;
+}
+
+.footer-nav-links > *:hover{
+  text-decoration: underline;
+}
+
+.footer p{
+  color: #747474;
+}
+
+.footer p > *{
+  color: inherit;
+}

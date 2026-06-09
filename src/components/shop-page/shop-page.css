@@ -1,0 +1,15 @@
+.shop-page{
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: stretch;
+  min-height: 100vh;
+}
+.shop-main-content{
+  max-width: 1296px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}

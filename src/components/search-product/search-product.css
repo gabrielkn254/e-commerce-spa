@@ -1,0 +1,27 @@
+.search-product{
+  width: 100%;
+}
+
+.search-product form{
+  display: flex;
+}
+.search-product form input{
+  width: 100%;
+  padding: 16px 16px;
+  font-size: 15px;
+  font-weight: normal;
+  color: #191919;
+  border: 1px solid #f7f7f7;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  outline: none;
+  transition: border-color 300ms ease;
+}
+
+.search-product form input:focus{
+  border-color: #191919;
+}
+
+.search-product form input::placeholder{
+  color: #747474;
+}
