@@ -1,11 +1,9 @@
 import React from 'react'
-import data from '../../data/data'
 import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
 import './product-details.css'
 
-const ProductDetails = () => {
-  const product = data[0]
+const ProductDetails = ({product}) => {
   return (
     <div className="product-details-page">
       <Navbar buttonText="Login to Admin Portal" btnClass="primary-btn" link={'/admin-portal'} />

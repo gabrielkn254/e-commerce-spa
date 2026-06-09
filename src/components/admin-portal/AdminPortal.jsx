@@ -5,9 +5,9 @@ import AddProductForm from './add-product-form/AddProductForm'
 import ProductsArchiveList from './products-archive-list/ProductsArchiveList'
 import './admin-portal.css'
 
-const AdminPortal = ({products, setProducts}) => {
+const AdminPortal = ({products, setProducts, setActiveProduct}) => {
   const [name, setName] =useState("")
-  const [price, setPrice] =useState("")
+  const [price, setPrice] =useState(0)
   const [image, setImage] =useState("")
   const [description, setDescription] =useState("")
 
@@ -26,15 +26,23 @@ const AdminPortal = ({products, setProducts}) => {
       description: genDescription
     }
 
-    //update products state and localStorage
-    setProducts((prev) => [...prev, newProduct])
-
     // reset states
     setName("")
     setImage("")
     setPrice("")
     setDescription("")
+
+    //update products state and localStorage
+    setProducts((prev) => [...prev, newProduct])
+
   }
+
+
+  const handleOnDeleteProduct = (productId) => {
+    setProducts(products.filter(product => product.id !== productId))
+  }
+
+
   return (
     <div>
       <Navbar  buttonText="Log Out" btnClass="danger-btn" link={'/'}/>
@@ -48,16 +56,20 @@ const AdminPortal = ({products, setProducts}) => {
           <div className='box'>
             <div className="left">
               <AddProductForm
-                name={setName}
-                price={setPrice}
-                image={setImage}
-                description={setDescription}
+                name={name}
+                setName = {setName}
+                price={price}
+                setPrice = {setPrice}
+                image={image}
+                setImage = {setImage}
+                description={description}
+                setDescription = {setDescription}
                 onSubmit={handleAddProduct}
               />
             </div>
             <hr className='box-middle-hr' />
             <div className="right">
-            <ProductsArchiveList products={products} />
+            <ProductsArchiveList products={products} onDeleteProduct={handleOnDeleteProduct} setActiveProduct = {setActiveProduct} />
             </div>
           </div>
         </div>

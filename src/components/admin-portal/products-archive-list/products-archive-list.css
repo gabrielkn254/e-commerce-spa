@@ -4,3 +4,18 @@
   margin: 0;
   text-align: left;
 }
+
+.products-archive-list-box .products-archive-list{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 24px;
+}
+
+.products-archive-list-box .products-archive-list .archive-card-hr{
+  border: none;
+  height: 1px;
+  background-color: #ededed;
+  width: auto;
+  margin: 0;
+}

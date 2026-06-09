@@ -1,42 +1,38 @@
 import React from 'react'
 import './add-product-form.css'
 
-const AddProductForm = ({name, price, image, description, onSubmit}) => {
+const AddProductForm = ({name, setName, price, setPrice, image, setImage, description, setDescription, onSubmit}) => {
   return (
     <form className='add-product-form' onSubmit={onSubmit}>
       <h2>Add a New product</h2>
       <div className='form-inputs'>
           <input
-          required
           type="text"
-          name='name'
+          value={name}
           placeholder='Product Name'
-          onChange={(e) => name(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
           autoComplete='off' />
 
           <input
-          required
           type="number"
-          name='price'
+          value={price}
           placeholder='Product Price'
-          onChange={(e) => price(e.target.value)}
+          onChange={(e) => setPrice(e.target.value)}
           autoComplete='off' />
 
           <textarea
-          required
           type="text"
-          name='image'
+          value={image}
           rows={2}
           placeholder='Paste image url'
-          onChange={(e) => image(e.target.value)}
+          onChange={(e) => setImage(e.target.value)}
           autoComplete='off' />
 
           <textarea
-          required
           type="text"
-          name='description'
+          value={description}
           placeholder='Paste product description, Use "." to separate points'
-          onChange={(e) => description(e.target.value)}
+          onChange={(e) => setDescription(e.target.value)}
           rows={9}
           autoComplete='off' />
       </div>
