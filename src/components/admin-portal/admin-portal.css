@@ -1,0 +1,55 @@
+.admin-portal-main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.admin-portal-main .admin-header{
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-top: 24px;
+}
+.admin-portal-main .admin-header h1{
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.admin-portal-main .admin-header .h1-hr{
+  border: none;
+  height: 1px;
+  background-color: #ededed;
+  width: auto;
+  margin: 0;
+}
+
+.admin-portal-main .box{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-around;
+  width: 100%;
+  gap: 48px;
+}
+
+.admin-portal-main .box .left{
+  padding-top: 48px;
+  width: 40%;
+}
+
+.admin-portal-main .box .right{
+  padding-top: 24px;
+  width: 60%;
+}
+
+.admin-portal-main .box .box-middle-hr{
+  border: none;
+  height: auto;
+  width: 1px;
+  background-color: #ededed;
+  margin: 0;
+}

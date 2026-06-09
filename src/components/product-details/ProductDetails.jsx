@@ -17,8 +17,8 @@ const ProductDetails = () => {
           <h1>{product.name}</h1>
           <p>KES {product.price}</p>
           <ul>
-            {product.description.map((item) => {
-              return <li><hr/>{item}</li>
+            {product.description.map((item, index) => {
+              return <li key={index}><hr/>{item}</li>
             })}
           </ul>
         </div>

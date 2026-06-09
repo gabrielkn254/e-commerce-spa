@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
 import data from './data/data'
@@ -9,13 +9,19 @@ import ProductDetails from './components/product-details/ProductDetails'
 
 
 function App() {
+const [products, setProducts] = useState(data)
+
+useEffect(() => {
+  localStorage.setItem("products", JSON.stringify(products))
+}, [products])
+
 
   return (
     <BrowserRouter>
       <Routes>
         <Route index element={<HomePage />} />
-        <Route path='/admin-portal' element = {<AdminPortal />} />
-        <Route path='/shop' element={<ShopPage />} />
+        <Route path='/admin-portal' element = {<AdminPortal products={products} setProducts={setProducts} />} />
+        <Route path='/shop' element={<ShopPage products={products} />} />
         <Route path='/product-details/:id' element={<ProductDetails/>} />
         
       </Routes>

@@ -4,13 +4,13 @@ import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
 import './shop-page.css'
 import SearchProduct from '../search-product/SearchProduct'
-import data from '../../data/data'
 
-const ShopPage = () => {
+const ShopPage = ({products}) => {
   const [searchTerm, setSearchTerm] = useState("")
-  const [products, setProducts] = useState(data)
 
-  const filteredProducts = products.filter((product) => ( product.name.toLowerCase().includes( searchTerm.toLowerCase() ) ))
+  const filteredProducts = products.filter((product) => ( 
+    product.name.toLowerCase().includes( searchTerm.toLowerCase() ) 
+  ))
 
 
   return (
