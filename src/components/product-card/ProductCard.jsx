@@ -8,7 +8,10 @@ const ProductCard = ({product}) => {
         <img src={product.image} alt={product.name} />
       </div>
       <div className='text'>
-        <h3>{product.name}</h3>
+        <div className="title">
+          <h3>{product.name}</h3>
+          <p className="description" >{product.description[0]}</p>
+        </div>
         <p><span className='currency'>KES </span>{product.price}</p>
       </div>
     </div>

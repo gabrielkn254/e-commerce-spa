@@ -7,10 +7,18 @@ const Navbar = ({buttonText, btnClass, link}) => {
   return (
     <div className="navbar">
       <div className='navbar-content'>
+
+        <Link to="/" className='logo'>
+          <p>
+            <strong>SMARTWATCH</strong>
+            <sup>TM</sup></p>
+        </Link>
+        
         <nav>
           <Link to='/'>HOME</Link>
           <Link to='/shop'>SHOP</Link>
         </nav>
+
         <Link to={link}>
           <button className={buttonClasses} >{buttonText}</button>
         </Link>

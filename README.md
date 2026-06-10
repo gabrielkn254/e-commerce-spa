@@ -27,7 +27,6 @@ App
   ↳ HomePage
       ↳ Navbar
       ↳ HeroSection
-      ↳ ProductsList
       ↳ Footer
 
   ↳ ShopPage

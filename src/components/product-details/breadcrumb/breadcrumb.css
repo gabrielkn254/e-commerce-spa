@@ -1,0 +1,25 @@
+.breadcrumb{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  max-width: 1296px;
+  margin: 0 auto;
+  padding-top: 24px;
+  font-weight: 600;
+
+}
+
+.breadcrumb > *{
+  text-decoration: none;
+  color: #747474;
+}
+
+.breadcrumb .link{
+  color: #191919;
+}
+
+.breadcrumb .link:hover{
+  color: #393939;
+  text-decoration: underline;
+}

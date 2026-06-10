@@ -8,6 +8,16 @@
   gap: 16px;
 }
 
+.navbar-content .logo{
+  text-decoration: none;
+  color: #191919;
+}
+
+.navbar-content .logo:hover{
+  text-decoration: underline;
+  color: #747474;
+}
+
 .navbar-content nav{
   display: flex;
   gap: 16px;
