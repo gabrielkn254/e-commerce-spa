@@ -23,3 +23,18 @@
   color: #393939;
   text-decoration: underline;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .breadcrumb {
+    padding: 24px 24px 0 24px;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .breadcrumb {
+    padding: 24px 16px 0 16px;
+    width: 100%;
+  }
+}

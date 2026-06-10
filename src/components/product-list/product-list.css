@@ -9,3 +9,18 @@
   text-decoration: none;
   color: inherit;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .product-list {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .product-list {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}

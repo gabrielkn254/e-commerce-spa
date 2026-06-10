@@ -62,3 +62,18 @@ hr{
   height: 1px;
   background-color: #ededed;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar-content {
+    padding: 12px 24px;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-content {
+    padding: 12px 16px;
+    width: 100%;
+  }
+}

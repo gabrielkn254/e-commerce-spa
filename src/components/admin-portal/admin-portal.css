@@ -53,3 +53,32 @@
   background-color: #ededed;
   margin: 0;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .admin-portal-main {
+    padding: 24px;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .admin-portal-main {
+    padding: 24px 16px;
+    width: 100%;
+  }
+
+  .admin-portal-main .box {
+    flex-direction: column;
+  }
+
+  .admin-portal-main .box .left, .admin-portal-main .box .right{
+    width: 100%;
+  }
+
+  .admin-portal-main .box .box-middle-hr{
+    border: none;
+    height: 1px;
+    width: auto;
+  }
+}
